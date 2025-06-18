@@ -1,0 +1,4 @@
+# ---- Core libraries your agent can actually use ----
+pytest~=8.0          # test runner Codex can call
+requests~=2.32       # handy HTTP client for demos
+rich~=13.7           # nicer CLI output (optional)
