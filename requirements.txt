@@ -1,8 +1,8 @@
-# ---- Core libraries your agent can actually use ----
-pytest~=8.0          # test runner Codex can call
-requests~=2.32       # handy HTTP client for demos
-rich~=13.7           # nicer CLI output (optional)
-gensim~=4.3          # word embedding models for the NLP notebook
-nltk~=3.9            # tokenization and stopword lists
-matplotlib~=3.9      # plotting for embedding visualizations
-scikit-learn~=1.5    # PCA dimensionality reduction for embeddings
+fastapi~=0.111
+uvicorn[standard]~=0.30
+jinja2~=3.1
+python-multipart~=0.0
+vaderSentiment~=3.3
+httpx~=0.27
+pytest~=8.3
+ruff~=0.5
