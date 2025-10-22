@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="card">
+  <form method="post" action="/">
+    <label for="text">Paste or type text to analyse</label>
+    <textarea id="text" name="text" rows="5" required>{{ submitted_text }}</textarea>
+    <button type="submit">Analyse sentiment</button>
+  </form>
+</section>
+
+{% if error %}
+  <section class="card error">
+    <h2>Something went wrong</h2>
+    <p>{{ error }}</p>
+  </section>
+{% endif %}
+
+{% if result %}
+  <section class="card result">
+    <h2>Result: <span class="label {{ result.label }}">{{ result.label|title }}</span></h2>
+    <dl>
+      <div>
+        <dt>Confidence</dt>
+        <dd>{{ '%.2f'|format(result.score) }}</dd>
+      </div>
+      <div>
+        <dt>Positive</dt>
+        <dd>{{ '%.2f'|format(result.positive) }}</dd>
+      </div>
+      <div>
+        <dt>Neutral</dt>
+        <dd>{{ '%.2f'|format(result.neutral) }}</dd>
+      </div>
+      <div>
+        <dt>Negative</dt>
+        <dd>{{ '%.2f'|format(result.negative) }}</dd>
+      </div>
+    </dl>
+  </section>
+{% endif %}
+{% endblock %}

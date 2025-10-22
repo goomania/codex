@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{% block title %}Sentiment Spotlight{% endblock %}</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" />
+    <link rel="stylesheet" href="{{ url_for('static', path='styles.css') }}" />
+  </head>
+  <body>
+    <header class="page-header">
+      <h1>Sentiment Spotlight</h1>
+      <p class="tagline">Understand the tone of your text instantly.</p>
+    </header>
+    <main>
+      {% block content %}{% endblock %}
+    </main>
+    <footer class="page-footer">
+      <p>Powered by <a href="https://github.com/cjhutto/vaderSentiment" target="_blank" rel="noopener">VADER Sentiment</a>.</p>
+    </footer>
+  </body>
+</html>
