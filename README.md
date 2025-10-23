@@ -15,6 +15,8 @@ artifacts for deployment, and documentation describing how to operate the servic
 - **JSON API** – Integrate with other services via `POST /api/sentiment`.
 - **Production ready** – Health-check endpoint, Docker image, and CI workflow are included.
 - **Tested** – Unit tests for the sentiment logic and integration tests for the API routes.
+- **MCP classroom demo** – A miniature in-process MCP agent shows how to pair a simple
+  rule-based tutor with MCP tooling for classroom demonstrations.
 
 ## Project layout
 
@@ -59,6 +61,18 @@ uvicorn app.main:app --reload
 
 Visit <http://127.0.0.1:8000> in your browser and submit any text to see the
 classification.
+
+### MCP classroom demo
+
+The `mcp_demo` package contains a fully self-contained example that illustrates how to
+spin up an MCP server and connect a tiny educational agent to it. Run the demo with:
+
+```bash
+python -m mcp_demo.run_demo
+```
+
+The script prints a short conversation that highlights the available tools and how the
+agent uses them to answer classroom questions.
 
 ## How to run tests
 
