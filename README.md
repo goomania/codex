@@ -60,6 +60,15 @@ uvicorn app.main:app --reload
 Visit <http://127.0.0.1:8000> in your browser and submit any text to see the
 classification.
 
+
+### Optional: Run the agentic Streamlit app
+
+```bash
+streamlit run streamlit_app.py
+```
+
+This chat-style app can route prompts to local tools, call a public API, and store/retrieve notes from a local SQLite database.
+
 ## How to run tests
 
 The repository includes a `Makefile` shortcut, but you can also call `pytest` directly.
